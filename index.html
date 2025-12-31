@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>For My Lady ❤️</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: "Segoe UI", sans-serif;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+      padding: 20px;
+    }
+
+    .card {
+      background: #fff;
+      width: 100%;
+      max-width: 380px;
+      padding: 30px 25px;
+      border-radius: 18px;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+      text-align: center;
+      animation: fadeIn 0.6s ease;
+    }
+
+    .message {
+      font-size: 1.1rem;
+      color: #333;
+      line-height: 1.6;
+      margin-bottom: 30px;
+    }
+
+    button {
+      background: #ff5c8a;
+      color: #fff;
+      border: none;
+      padding: 12px 24px;
+      font-size: 1rem;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    button:hover {
+      background: #e94b78;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .message {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <div class="message" id="message"></div>
+    <button onclick="nextMessage()">Click here for next ❤️</button>
+  </div>
+
+  <script>
+    const messages = [
+      "Hello Ms. S 💖<br/><br/>Good Evening my shona",
+
+      "My lady 🌹<br/><br/>Did you get a chance to go through the list of restaurants I shared?",
+
+      "Can you tell me tomorrow 🤍<br/><br/>Which restaurant you’d like us to choose for our charismatic dinner?",
+
+      "So that I can make a few arrangemets ✨<br/><br/>And even call the restaurant to see the avilibiltty for us.",
+
+      "No matter which restaurant you choose,💞<br/><br/> it’ll be perfect because it’s with you.",
+
+      "Every plan feels 🫶<br/><br/>special when it includes you.",
+
+      "I’m genuinely excited ⭐ <br/><br/>to spend tommorow's evening with you.",
+
+      "And lastly ❤️<br/><br/>Please do call me. I’m dying to speak with you and hear your voice as soon as possible.",
+
+      "Talk to me soon… 😍 my day feels incomplete without your voice"
+    ];
+
+    let index = 0;
+    const messageEl = document.getElementById("message");
+
+    messageEl.innerHTML = messages[index];
+
+    function nextMessage() {
+      index++;
+      if (index < messages.length) {
+        messageEl.innerHTML = messages[index];
+      } else {
+        messageEl.innerHTML = "That’s all for now 💕<br/><br/>Waiting for your call…";
+      }
+    }
+  </script>
+
+</body>
+</html>
